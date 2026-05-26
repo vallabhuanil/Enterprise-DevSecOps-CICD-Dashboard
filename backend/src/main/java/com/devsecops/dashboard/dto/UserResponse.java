@@ -1,0 +1,12 @@
+package com.devsecops.dashboard.dto;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+public record UserResponse(
+    Long id,
+    String username,
+    String email,
+    List<String> roles,
+    LocalDateTime createdAt
+) {}

@@ -1,0 +1,9 @@
+package com.devsecops.dashboard.repository;
+
+import com.devsecops.dashboard.entity.PipelineStage;
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
+
+public interface PipelineStageRepository extends JpaRepository<PipelineStage, Long> {
+    List<PipelineStage> findByPipelineIdOrderByOrderIndexAsc(Long pipelineId);
+}
