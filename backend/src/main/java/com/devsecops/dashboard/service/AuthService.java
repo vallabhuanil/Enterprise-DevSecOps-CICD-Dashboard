@@ -128,7 +128,8 @@ public class AuthService {
                     "Please proceed to authorize your sessions at https://enterprise-dev-sec-ops-cicd-dashboard.vercel.app\n\n" +
                     "Regards,\n" +
                     "DevSecOps SecOps Auditing Team");
-            mailSender.send(mailMessage);
+            // mailSender.send(mailMessage);
+            mailtrapEmailService.sendOtp(email, otp);
         } catch (Exception e) {
             System.err.println("Failed to send welcome email: " + e.getMessage());
         }
