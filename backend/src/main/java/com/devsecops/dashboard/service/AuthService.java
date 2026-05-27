@@ -119,7 +119,7 @@ public class AuthService {
             SimpleMailMessage mailMessage = new SimpleMailMessage();
             mailMessage.setTo(savedUser.getEmail());
             mailMessage.setSubject("DevSecOps Hub - Operator Account Registered");
-            mailMessage.setFrom("vallabhuanilsai2005@gmail.com");
+            mailMessage.setFrom(System.getenv("MAIL_USERNAME"));
             mailMessage.setText("Dear " + savedUser.getUsername() + ",\n\n" +
                     "Your operator account on the Enterprise DevSecOps CICD Dashboard has been successfully verified and registered!\n\n" +
                     "Details:\n" +
