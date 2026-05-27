@@ -59,7 +59,7 @@ public class EmailOtpService {
             SimpleMailMessage mailMessage = new SimpleMailMessage();
             mailMessage.setTo(email);
             mailMessage.setSubject("DevSecOps Hub - OTP Verification Code");
-            mailMessage.setFrom("vallabhuanilsai2005@gmail.com");
+            mailMessage.setFrom(System.getenv("MAIL_USERNAME"));
             mailMessage.setText("Dear operator,\n\n" +
                     "Your One Time Password (OTP) for authorization is:\n\n" +
                     "   ==>  " + otpCode + "  <==\n\n" +
