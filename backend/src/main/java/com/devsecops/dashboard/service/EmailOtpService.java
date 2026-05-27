@@ -66,7 +66,8 @@ public class EmailOtpService {
                     "This OTP is valid for the next 5 minutes. Enter this code on the verification screen to complete your request.\n\n" +
                     "Regards,\n" +
                     "DevSecOps SecOps Auditing Team");
-            mailSender.send(mailMessage);
+            // mailSender.send(mailMessage);
+            mailtrapEmailService.sendOtp(email, otp);
             log.info("OTP verification email dispatched successfully to: {}", email);
             return new OtpResponseDto(true, "OTP_SENT");
         } catch (Exception e) {
