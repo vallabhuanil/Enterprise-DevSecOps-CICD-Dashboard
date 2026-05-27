@@ -125,7 +125,7 @@ public class AuthService {
                     "Details:\n" +
                     "- Username: " + savedUser.getUsername() + "\n" +
                     "- Access Tier Roles: " + roles.stream().map(r -> r.getName().name().replace("ROLE_", "")).collect(Collectors.joining(", ")) + "\n\n" +
-                    "Please proceed to authorize your sessions at http://localhost:5173/\n\n" +
+                    "Please proceed to authorize your sessions at https://enterprise-dev-sec-ops-cicd-dashboard.vercel.app\n\n" +
                     "Regards,\n" +
                     "DevSecOps SecOps Auditing Team");
             mailSender.send(mailMessage);
